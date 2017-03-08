@@ -1,0 +1,43 @@
+{
+  "name": "cheese-name",
+  "version": "1.0.0",
+  "description": "Gives you a real cheese name... like whenever you want",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrjohnson/cheese-name.git"
+  },
+  "bin": {
+    "cheese-name": "bin/cli.js"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "cheese-name",
+    "cheese",
+    "random",
+    "list"
+  ],
+  "author": {
+    "name": "Jonathan Johnson",
+    "email": "jon.johnson@ucsf.edu"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrjohnson/cheese-name/issues"
+  },
+  "homepage": "https://github.com/jrjohnson/cheese-name#readme",
+  "dependencies": {
+    "lodash.sample": "^4.2.1",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-plugin-mocha": "^4.8.0",
+    "mocha": "^3.2.0"
+  }
+}
