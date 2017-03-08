@@ -43,5 +43,5 @@ $ cheese-name --help
 
 ## Acknowledgments
 
-* Stolen, practically verbatim, from [metal-name](https://raw.githubusercontent.com/Trott/metal-name)
+* Stolen, practically verbatim, from [metal-name](https://github.com/Trott/metal-name)
 * Cheese names from http://www.nourishinteractive.com/healthy-living/free-nutrition-articles/110-list-cheeses
