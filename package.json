@@ -4,7 +4,8 @@
   "description": "Gives you a real cheese name... like whenever you want",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && mocha"
+    "lint:js": "eslint .",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
