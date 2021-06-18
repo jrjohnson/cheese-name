@@ -2,11 +2,11 @@ name: Continuous Integration
 
 on:
   push:
+  pull_request:
     branches:
       - master
     tags:
       - '*'
-  pull_request: {}
   schedule:
     - cron: '0 6 * * 0' # weekly, on sundays
 
