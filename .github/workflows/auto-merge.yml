@@ -1,0 +1,22 @@
+name: Dependabot auto-merge
+on: pull_request_target
+permissions:
+  pull-requests: write
+  content: write
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{steps.dependabot-metadata.outputs.update-type == 'version-update:semver-minor' || steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch'}}
+        uses: peter-evans/enable-pull-request-automerge@v1
+        with:
+          pull-request-number: ${{github.event.pull_request.number}}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: merge
